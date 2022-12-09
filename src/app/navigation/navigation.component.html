@@ -1,1 +1,22 @@
-<p>literally anything!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand"></a>
+    <a class="navbar-brand">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" height="60" alt="Pokemon">
+  </a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link text-warning" routerLink="/collection" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Collection<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-warning" routerLink="/swap" routerLinkActive="active">Swap</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-warning" routerLink="/search" routerLinkActive="active">Search</a>
+      </li>
+    </ul>
+      <button class="btn btn-warning my-2 my-sm-0" type="submit">Sign In</button>
+  </div>
+</nav>
+
