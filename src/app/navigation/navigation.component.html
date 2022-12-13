@@ -6,6 +6,16 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" height="60" alt="Pokemon">
   </a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <li class="nav-item" *ngIf="isAuthenticated">
+  <a class="nav-link" routerLink="/collection" routerLinkActive="active"
+    >Collection</a
+  >
+<li class="nav-item" *ngIf="!isAuthenticated">
+  <a class="nav-link" routerLink="/authentication" routerLinkActive="active">Authentication</a>
+</li>
+<li class="nav-item" *ngIf="isAuthenticated" (click)="onSignOut()">
+  <a class="nav-link" routerLink="/auth" routerLinkActive="active">Sign Out</a>
+</li>
       <li class="nav-item">
         <a class="nav-link text-warning" routerLink="/collection" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Collection<span class="sr-only">(current)</span></a>
       </li>
@@ -19,4 +29,3 @@
       <button class="btn btn-warning my-2 my-sm-0" type="submit">Sign In</button>
   </div>
 </nav>
-
