@@ -1,1 +1,10 @@
-<p>navigation works!</p>
+<li class="nav-item" *ngIf="isAuthenticated">
+  <a class="nav-link" routerLink="/collection" routerLinkActive="active"
+    >Collection</a
+  >
+<li class="nav-item" *ngIf="!isAuthenticated">
+  <a class="nav-link" routerLink="/authentication" routerLinkActive="active">Authentication</a>
+</li>
+<li class="nav-item" *ngIf="isAuthenticated" (click)="onSignOut()">
+  <a class="nav-link" routerLink="/auth" routerLinkActive="active">Sign Out</a>
+</li>
